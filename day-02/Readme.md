@@ -135,3 +135,24 @@
             statements;
         }while(condition);
         ```
+
+## Arrays
+
+![](./images/arrays.dio.png)
+
+## Classes and Objects
+
+-   Different kinds of classes:
+    -   programs - a class with a `public static void main(String[] args)` method
+    -   entity or model - class which represent information (for example, Customer, Employee, Supplier, Book, Department, ..)
+    -   dto - data transfer objects, similar to entity or model classes
+    -   service - class that contain business logic methods (AccountService, CustomerSerivce, etc.)
+    -   repository or dao - class that contain logic to persist (store and access) data (usually from databases)
+    -   utilities or helper - class that contain small reusable logic that may be used by service or dao classes
+    -   and many other
+
+So, the packages are created based on what kind of a class we are creating.
+
+For example, `com.targetindia.entity.Product` or `com.targetindia.web.servlet.LoginServlet` or `com.targetindia.controller.rest.EmployeeController`
+
+![](./images/person.dio.png)
