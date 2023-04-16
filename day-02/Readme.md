@@ -33,4 +33,62 @@
     ![](./images/stack.dio.png)
 
 1. Selection
+
+    - Allows conditional execution of code
+    - `if-else` and `switch-case`
+
+    ```java
+        if(condition) {
+            statements;
+        }
+
+        if(condition) {
+            statements;
+        }
+        else {
+            statements;
+        }
+
+        // nesting of if statements
+        if(condition) {
+            statements;
+            if(condition) {
+                statements;
+                if(condition) {
+                    statements;
+                }
+            }
+        }
+
+        // chain of if statements
+        if(condition1) {
+            statements1;
+        }
+        else if(condition2) {
+            statements2;
+        }
+        else if(condition3) {
+            statements3;
+        }
+        else {
+            statements4;
+        }
+
+        // I generally avoid the above, and use this instead:
+        if(condition1){
+            statements1;
+            return;
+        }
+        if(condition2){
+            statements2;
+            return;
+        }
+        if(condition3){
+            statements3;
+            return;
+        }
+        statements4;
+        // assuming that there is no code to be executed after the if-else statements
+    ```
+
 1. Iteration
