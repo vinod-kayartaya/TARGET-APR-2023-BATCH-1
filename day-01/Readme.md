@@ -41,3 +41,21 @@
 -   `double` --> `java.lang.Double`
 -   `char` --> `java.lang.Character`
 -   `boolean` --> `java.lang.Boolean`
+
+### Identifier naming convention
+
+-   Indentifiers - variables, method/function name, class (or any other user defined datatype), package
+-   No underscores (generally)
+    -   For example, we don't use like - `my_name` or `is_input_year_leap()`
+-   TitleCase or PascalCase for - `class`, `interface`, `enum`, `annotation` and `record`
+    -   For example, `HelloWorld` or `ArrayIndexOutOfBoundsException`
+-   camelCase - first word in lowercase, and rest of the words of the identifier name are in TitleCase
+    -   used for variables, methods
+    -   For example, `myName`, `isInputYearLeap()`, `main()`, `toUpperCase()`, `parseInt()`, `registerUserAsAccountHolder()`
+-   lowercase words delimited with dot
+    -   used for packages
+    -   For example, `com.targetindia.programs`, `java.lang`,
+-   UPPER_CASE_WORDS_DELIMITED_WITH_UNDERSCORES
+    -   generally used for constants
+    -   For example, Integer.MIN_VALUE or Double.MAX_VALUE
+-   Could be exceptions

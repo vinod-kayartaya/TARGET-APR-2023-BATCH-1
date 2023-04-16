@@ -6,12 +6,15 @@ public class UsingVariablesDemo {
         short s1 = 102;
         int i1 = 494;
         long l1;
+        String my_name = "Vinod"; // not a good naming convention. check sonar lint report
+        System.out.println("my_name is " + my_name);
 
         b1 = 100;
 
         System.out.println("b1 is " + b1);
 
-        String st1 = "1000", st2="2000";
+        String st1 = "1000";
+        String st2="2000";
         String st3 = st1+st2; // concatenation
         System.out.println(st3);
 
