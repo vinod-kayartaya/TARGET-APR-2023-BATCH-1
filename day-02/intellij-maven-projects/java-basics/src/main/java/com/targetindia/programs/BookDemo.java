@@ -24,6 +24,5 @@ public class BookDemo {
         System.out.printf("The book with title '%s' costs %.1f rupees.\n",
                 b1.getTitle(), b1.getPrice());
 
-
     }
 }
