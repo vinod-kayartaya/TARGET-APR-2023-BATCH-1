@@ -1,0 +1,29 @@
+@startuml
+
+java.lang.Object <|-- c.t.m.Person
+c.t.m.Person <|-- c.t.m.Employee
+c.t.m.Employee <|-- c.t.m.Manager
+c.t.m.Person <|-- c.t.m.Student
+
+class c.t.m.Person {
+    + abstract getGrade(): String;
+    + print(): void;
+    + writeEmail(): void;
+}
+
+class c.t.m.Student {
+    + print(): void;
+    + getGrade(): String;
+}
+
+class c.t.m.Employee {
+    + print(): void;
+    + getGrade(): String;
+}
+
+class c.t.m.Manager {
+    + print(): void;
+    + writeEmail(): void;
+}
+
+@enduml

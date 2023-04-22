@@ -1,0 +1,20 @@
+[TRACE] 2023-04-22 12:23:47,228 main            com.targetindia.programs.CreateEmployee [24] This is a trace message
+[DEBUG] 2023-04-22 12:23:47,230 main            com.targetindia.programs.CreateEmployee [25] This is a debug message
+[ INFO] 2023-04-22 12:23:47,230 main            com.targetindia.programs.CreateEmployee [26] This is a info message
+[ WARN] 2023-04-22 12:23:47,230 main            com.targetindia.programs.CreateEmployee [27] This is a warn message
+[ERROR] 2023-04-22 12:23:47,231 main            com.targetindia.programs.CreateEmployee [28] This is a error message
+[TRACE] 2023-04-22 12:23:58,179 main            com.targetindia.programs.CreateEmployee [24] This is a trace message
+[DEBUG] 2023-04-22 12:23:58,180 main            com.targetindia.programs.CreateEmployee [25] This is a debug message
+[ INFO] 2023-04-22 12:23:58,189 main            com.targetindia.programs.CreateEmployee [26] This is a info message
+[ WARN] 2023-04-22 12:23:58,189 main            com.targetindia.programs.CreateEmployee [27] This is a warn message
+[ERROR] 2023-04-22 12:23:58,190 main            com.targetindia.programs.CreateEmployee [28] This is a error message
+[TRACE] 2023-04-22 12:38:11,996 main            com.targetindia.programs.CreateEmployee [25] This is a trace message
+[DEBUG] 2023-04-22 12:38:11,997 main            com.targetindia.programs.CreateEmployee [26] This is a debug message
+[ INFO] 2023-04-22 12:38:11,997 main            com.targetindia.programs.CreateEmployee [27] This is a info message
+[ WARN] 2023-04-22 12:38:11,997 main            com.targetindia.programs.CreateEmployee [28] This is a warn message
+[ERROR] 2023-04-22 12:38:11,997 main            com.targetindia.programs.CreateEmployee [29] This is a error message
+[TRACE] 2023-04-22 12:39:34,162 main            com.targetindia.programs.CreateEmployee [25] This is a trace message
+[DEBUG] 2023-04-22 12:39:34,163 main            com.targetindia.programs.CreateEmployee [26] This is a debug message
+[ INFO] 2023-04-22 12:39:34,163 main            com.targetindia.programs.CreateEmployee [27] This is a info message
+[ WARN] 2023-04-22 12:39:34,163 main            com.targetindia.programs.CreateEmployee [28] This is a warn message
+[ERROR] 2023-04-22 12:39:34,163 main            com.targetindia.programs.CreateEmployee [29] This is a error message
