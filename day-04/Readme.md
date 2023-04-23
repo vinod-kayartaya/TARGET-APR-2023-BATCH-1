@@ -36,3 +36,17 @@ Implementing multiple interfaces must be done with great caution.
 Problem - _What to implement / overrid in class C?_
 
 Solution - _Choose between interface A and interface B_
+
+# Exceptions
+
+- An exceptional scenario is a an error that occurs during the execution of the program.
+- Compiler only checks for syntax errors
+- During the execution of the program, the JRE or part of the application or API may cause an error, which in most cases can be handled.
+  - For example, you are trying to open and read a file using the name and path of the file,
+    - but that file may not exist
+    - the file exists, but you do not have access permission
+    - the filename exists, but is a directory not a file
+  - This particular scenario is faced by the Java IO api, and will create an object of a suitable class, and **throws** that object to you
+    - if the object thrown is not **caught** and handled by your code, then the same is re-thrown to the JRE, and JRE will break the execution of the program and reports the entire stack trace with the error message (if any)
+
+![Exception hierarchy](../out/day-04/exceptions/exceptions.png)

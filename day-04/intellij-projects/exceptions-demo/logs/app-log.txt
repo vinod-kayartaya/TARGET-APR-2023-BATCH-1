@@ -1,0 +1,158 @@
+[TRACE] 2023-04-23 12:26:48,083 main            com.targetindia.programs.ExceptionDemo [8] started executing main() method
+[TRACE] 2023-04-23 12:26:48,084 main            com.targetindia.programs.ExceptionDemo [10] input1 is 890
+[TRACE] 2023-04-23 12:26:48,085 main            com.targetindia.programs.ExceptionDemo [12] input2 is 44
+[TRACE] 2023-04-23 12:26:48,085 main            com.targetindia.programs.ExceptionDemo [16] numerator is 890
+[TRACE] 2023-04-23 12:26:48,085 main            com.targetindia.programs.ExceptionDemo [18] denominator is 44
+[TRACE] 2023-04-23 12:26:48,086 main            com.targetindia.programs.ExceptionDemo [20] quotient is 20
+[TRACE] 2023-04-23 12:26:48,086 main            com.targetindia.programs.ExceptionDemo [22] remainder is 10
+[TRACE] 2023-04-23 12:26:48,094 main            com.targetindia.programs.ExceptionDemo [23] finished executing the main() method
+[TRACE] 2023-04-23 12:32:44,480 main            com.targetindia.programs.ExceptionDemo [8] started executing main() method
+[TRACE] 2023-04-23 12:32:44,481 main            com.targetindia.programs.ExceptionDemo [10] input1 is 890
+[TRACE] 2023-04-23 12:32:44,481 main            com.targetindia.programs.ExceptionDemo [12] input2 is asdf
+[TRACE] 2023-04-23 12:32:44,482 main            com.targetindia.programs.ExceptionDemo [16] numerator is 890
+[TRACE] 2023-04-23 12:36:02,494 main            com.targetindia.programs.ExceptionDemo [8] started executing main() method
+[TRACE] 2023-04-23 12:36:02,496 main            com.targetindia.programs.ExceptionDemo [10] input1 is 890
+[TRACE] 2023-04-23 12:36:02,496 main            com.targetindia.programs.ExceptionDemo [12] input2 is 0
+[TRACE] 2023-04-23 12:36:02,496 main            com.targetindia.programs.ExceptionDemo [16] numerator is 890
+[TRACE] 2023-04-23 12:36:02,496 main            com.targetindia.programs.ExceptionDemo [18] denominator is 0
+[TRACE] 2023-04-23 12:38:40,748 main            com.targetindia.programs.ExceptionDemo [8] started executing main() method
+[TRACE] 2023-04-23 12:46:31,007 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[ WARN] 2023-04-23 12:46:31,008 main            com.targetindia.programs.ExceptionDemo [26] There was an exception with a message - Index 0 out of bounds for length 0
+[TRACE] 2023-04-23 12:46:31,008 main            com.targetindia.programs.ExceptionDemo [29] finished executing the main() method
+[TRACE] 2023-04-23 12:49:32,613 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[ WARN] 2023-04-23 12:49:32,614 main            com.targetindia.programs.ExceptionDemo [26] Expected 2 integers from command line, got 0
+[TRACE] 2023-04-23 12:49:32,615 main            com.targetindia.programs.ExceptionDemo [31] finished executing the main() method
+[TRACE] 2023-04-23 12:49:56,456 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [28] There was an exception with a message - / by zero
+[TRACE] 2023-04-23 12:49:56,457 main            com.targetindia.programs.ExceptionDemo [31] finished executing the main() method
+[TRACE] 2023-04-23 12:50:29,060 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:50:29,061 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:50:29,061 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-23 12:50:29,061 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:50:29,061 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-23 12:50:29,061 main            com.targetindia.programs.ExceptionDemo [29] Cannot divide an integer by zero!
+[TRACE] 2023-04-23 12:50:29,062 main            com.targetindia.programs.ExceptionDemo [35] finished executing the main() method
+[TRACE] 2023-04-23 12:50:54,182 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:50:54,184 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:50:54,184 main            com.targetindia.programs.ExceptionDemo [16] input2 is asdf
+[TRACE] 2023-04-23 12:50:54,184 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[ WARN] 2023-04-23 12:50:54,184 main            com.targetindia.programs.ExceptionDemo [32] There was an exception with a message - For input string: "asdf"
+[TRACE] 2023-04-23 12:50:54,185 main            com.targetindia.programs.ExceptionDemo [35] finished executing the main() method
+[TRACE] 2023-04-23 12:52:17,142 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:52:17,144 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:52:17,144 main            com.targetindia.programs.ExceptionDemo [16] input2 is asdf
+[TRACE] 2023-04-23 12:52:17,144 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[ WARN] 2023-04-23 12:52:17,144 main            com.targetindia.programs.ExceptionDemo [30] Only int arguments were expected
+[TRACE] 2023-04-23 12:52:17,144 main            com.targetindia.programs.ExceptionDemo [35] finished executing the main() method
+[TRACE] 2023-04-23 12:52:30,632 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:52:30,633 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:52:30,633 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-23 12:52:30,633 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:52:30,633 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-23 12:52:30,634 main            com.targetindia.programs.ExceptionDemo [28] Cannot divide an integer by zero!
+[TRACE] 2023-04-23 12:52:30,634 main            com.targetindia.programs.ExceptionDemo [35] finished executing the main() method
+[TRACE] 2023-04-23 12:52:41,701 main            com.targetindia.programs.ExceptionDemo [10] started executing main() method
+[TRACE] 2023-04-23 12:52:41,703 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[ WARN] 2023-04-23 12:52:41,703 main            com.targetindia.programs.ExceptionDemo [26] Expected 2 integers from command line, got 1
+[TRACE] 2023-04-23 12:52:41,703 main            com.targetindia.programs.ExceptionDemo [35] finished executing the main() method
+[TRACE] 2023-04-23 12:58:20,096 main            com.targetindia.programs.ExceptionDemo [39] started executing main() method
+[TRACE] 2023-04-23 12:58:20,096 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 12:58:20,097 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[ WARN] 2023-04-23 12:58:20,097 main            com.targetindia.programs.ExceptionDemo [26] Expected 2 integers from command line, got 1
+[TRACE] 2023-04-23 12:58:20,097 main            com.targetindia.programs.ExceptionDemo [35] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 12:58:20,097 main            com.targetindia.programs.ExceptionDemo [43] finished executing the main() method
+[TRACE] 2023-04-23 12:58:41,956 main            com.targetindia.programs.ExceptionDemo [39] started executing main() method
+[TRACE] 2023-04-23 12:58:41,959 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 12:58:41,959 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:58:41,960 main            com.targetindia.programs.ExceptionDemo [16] input2 is 66
+[TRACE] 2023-04-23 12:58:41,960 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:58:41,960 main            com.targetindia.programs.ExceptionDemo [20] denominator is 66
+[TRACE] 2023-04-23 12:58:41,960 main            com.targetindia.programs.ExceptionDemo [22] quotient is 35
+[TRACE] 2023-04-23 12:58:41,960 main            com.targetindia.programs.ExceptionDemo [24] remainder is 35
+[TRACE] 2023-04-23 12:58:41,961 main            com.targetindia.programs.ExceptionDemo [35] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 12:58:41,961 main            com.targetindia.programs.ExceptionDemo [43] finished executing the main() method
+[TRACE] 2023-04-23 12:59:26,287 main            com.targetindia.programs.ExceptionDemo [40] started executing main() method
+[TRACE] 2023-04-23 12:59:26,288 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 12:59:26,288 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:59:26,288 main            com.targetindia.programs.ExceptionDemo [16] input2 is 66
+[TRACE] 2023-04-23 12:59:26,289 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:59:26,289 main            com.targetindia.programs.ExceptionDemo [20] denominator is 66
+[TRACE] 2023-04-23 12:59:26,289 main            com.targetindia.programs.ExceptionDemo [22] quotient is 35
+[TRACE] 2023-04-23 12:59:26,289 main            com.targetindia.programs.ExceptionDemo [24] remainder is 35
+[TRACE] 2023-04-23 12:59:26,289 main            com.targetindia.programs.ExceptionDemo [44] finished executing the main() method
+[TRACE] 2023-04-23 12:59:57,619 main            com.targetindia.programs.ExceptionDemo [41] started executing main() method
+[TRACE] 2023-04-23 12:59:57,621 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 12:59:57,622 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 12:59:57,622 main            com.targetindia.programs.ExceptionDemo [16] input2 is 66
+[TRACE] 2023-04-23 12:59:57,622 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 12:59:57,622 main            com.targetindia.programs.ExceptionDemo [20] denominator is 66
+[TRACE] 2023-04-23 12:59:57,622 main            com.targetindia.programs.ExceptionDemo [22] quotient is 35
+[TRACE] 2023-04-23 12:59:57,623 main            com.targetindia.programs.ExceptionDemo [24] remainder is 35
+[TRACE] 2023-04-23 12:59:57,623 main            com.targetindia.programs.ExceptionDemo [37] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 12:59:57,623 main            com.targetindia.programs.ExceptionDemo [45] finished executing the main() method
+[TRACE] 2023-04-23 13:00:12,399 main            com.targetindia.programs.ExceptionDemo [41] started executing main() method
+[TRACE] 2023-04-23 13:00:12,400 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [29] Cannot divide an integer by zero!
+[TRACE] 2023-04-23 13:00:12,401 main            com.targetindia.programs.ExceptionDemo [45] finished executing the main() method
+[TRACE] 2023-04-23 13:01:00,046 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:01:00,047 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:01:00,047 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:01:00,047 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-23 13:01:00,047 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:01:00,048 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-23 13:01:00,048 main            com.targetindia.programs.ExceptionDemo [29] Cannot divide an integer by zero!
+[TRACE] 2023-04-23 13:01:00,048 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-23 13:01:00,048 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method
+[TRACE] 2023-04-23 13:01:16,581 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:01:16,583 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:01:16,583 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:01:16,583 main            com.targetindia.programs.ExceptionDemo [16] input2 is 77
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [20] denominator is 77
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [22] quotient is 30
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [24] remainder is 35
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-23 13:01:16,584 main            com.targetindia.programs.ExceptionDemo [40] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 13:01:16,585 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method
+[TRACE] 2023-04-23 13:03:07,718 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:03:07,719 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:03:07,719 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:03:07,719 main            com.targetindia.programs.ExceptionDemo [16] input2 is 77
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [20] denominator is 77
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [22] quotient is 30
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [24] remainder is 35
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-23 13:03:07,720 main            com.targetindia.programs.ExceptionDemo [40] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 13:03:07,721 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method
+[TRACE] 2023-04-23 13:03:20,202 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:03:20,203 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:03:20,205 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:03:20,205 main            com.targetindia.programs.ExceptionDemo [16] input2 is sdf
+[TRACE] 2023-04-23 13:03:20,205 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:03:20,205 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-23 13:04:14,989 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:04:14,991 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:04:14,991 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:04:14,991 main            com.targetindia.programs.ExceptionDemo [16] input2 is sdf
+[TRACE] 2023-04-23 13:04:14,991 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[ WARN] 2023-04-23 13:04:14,991 main            com.targetindia.programs.ExceptionDemo [32] Only int arguments were expected
+[TRACE] 2023-04-23 13:04:14,992 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-23 13:04:14,992 main            com.targetindia.programs.ExceptionDemo [40] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-23 13:04:14,992 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method
+[TRACE] 2023-04-23 13:04:36,861 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-23 13:04:36,862 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-23 13:04:36,862 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [16] input2 is 33
+[TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [20] denominator is 33
+[TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [22] quotient is 71
+[TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [24] remainder is 2

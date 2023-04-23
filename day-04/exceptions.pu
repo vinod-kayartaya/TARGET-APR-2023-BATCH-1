@@ -1,0 +1,20 @@
+@startuml
+
+Object <|-- Throwable
+Throwable <|-- Error
+Throwable <|-- Exception
+
+Exception <|-- UNCHECKED_EXCEPTION.RuntimeException
+Exception <|-- IOException
+IOException <|-- FileNotFoundException
+IOException <|-- EOFException
+Exception <|-- SQLException
+
+UNCHECKED_EXCEPTION.RuntimeException <|-- UNCHECKED_EXCEPTION.ArithmeticException
+UNCHECKED_EXCEPTION.RuntimeException <|-- UNCHECKED_EXCEPTION.NumberFormatException
+UNCHECKED_EXCEPTION.RuntimeException <|-- UNCHECKED_EXCEPTION.IndexOutOfBoundsException
+UNCHECKED_EXCEPTION.IndexOutOfBoundsException <|-- UNCHECKED_EXCEPTION.ArrayIndexOutOfBoundsException
+UNCHECKED_EXCEPTION.RuntimeException <|-- UNCHECKED_EXCEPTION.NullPointerException
+UNCHECKED_EXCEPTION.RuntimeException <|-- UNCHECKED_EXCEPTION.ClassCastException
+
+@enduml
