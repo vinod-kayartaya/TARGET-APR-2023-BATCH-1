@@ -50,3 +50,33 @@ Solution - _Choose between interface A and interface B_
     - if the object thrown is not **caught** and handled by your code, then the same is re-thrown to the JRE, and JRE will break the execution of the program and reports the entire stack trace with the error message (if any)
 
 ![Exception hierarchy](../out/day-04/exceptions/exceptions.png)
+
+
+### Handling exceptions
+
+```java
+try {
+  // statements
+}
+catch(Exception e){
+  // handle exception
+}
+
+try {
+  // statements
+}
+finally {
+  // cleanup activities
+}
+
+try {
+  // statements
+}
+// additional catch blocks here
+catch(Exception e){
+  // handle exception
+}
+finally {
+  // cleanup activities
+}
+```

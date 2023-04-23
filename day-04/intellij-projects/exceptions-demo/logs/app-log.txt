@@ -156,3 +156,58 @@
 [TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [20] denominator is 33
 [TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [22] quotient is 71
 [TRACE] 2023-04-23 13:04:36,863 main            com.targetindia.programs.ExceptionDemo [24] remainder is 2
+[TRACE] 2023-04-23 13:27:31,823 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:27:31,845 main            com.targetindia.programs.CreateProducts [17] laptop details - Product(id=123, name=Lenovo Think Pad Laptop, price=145000.0)
+[TRACE] 2023-04-23 13:27:31,846 main            com.targetindia.programs.CreateProducts [18] main() execution is finished
+[TRACE] 2023-04-23 13:27:47,191 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:27:47,206 main            com.targetindia.programs.CreateProducts [17] laptop details - Product(id=-123, name=Lenovo Think Pad Laptop, price=145000.0)
+[TRACE] 2023-04-23 13:27:47,207 main            com.targetindia.programs.CreateProducts [18] main() execution is finished
+[TRACE] 2023-04-23 13:31:47,889 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:31:47,892 main            com.targetindia.programs.CreateProducts [13] new Product created
+[TRACE] 2023-04-23 13:33:48,690 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:33:48,693 main            com.targetindia.programs.CreateProducts [13] new Product created
+[TRACE] 2023-04-23 13:33:48,693 main            com.targetindia.programs.CreateProducts [15] assigned 123 to p1.id
+[TRACE] 2023-04-23 13:34:09,895 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:34:09,897 main            com.targetindia.programs.CreateProducts [13] new Product created
+[TRACE] 2023-04-23 13:34:09,897 main            com.targetindia.programs.CreateProducts [15] assigned 123 to p1.id
+[TRACE] 2023-04-23 13:34:09,897 main            com.targetindia.programs.CreateProducts [17] assigned Lenovo Think Pad Laptop to p1.name
+[TRACE] 2023-04-23 13:40:49,390 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:40:49,392 main            com.targetindia.programs.CreateProducts [14] new Product created
+[TRACE] 2023-04-23 13:40:49,392 main            com.targetindia.programs.CreateProducts [16] assigned 123 to p1.id
+[TRACE] 2023-04-23 13:40:49,392 main            com.targetindia.programs.CreateProducts [18] assigned Lenovo Think Pad Laptop to p1.name
+[ WARN] 2023-04-23 13:40:49,392 main            com.targetindia.programs.CreateProducts [23] There was an error - Product price must be > 0
+[TRACE] 2023-04-23 13:40:49,393 main            com.targetindia.programs.CreateProducts [26] main() execution is finished
+[TRACE] 2023-04-23 13:41:12,396 main            com.targetindia.programs.CreateProducts [9] starting to execute main()
+[TRACE] 2023-04-23 13:41:12,400 main            com.targetindia.programs.CreateProducts [14] new Product created
+[TRACE] 2023-04-23 13:41:12,400 main            com.targetindia.programs.CreateProducts [16] assigned 123 to p1.id
+[ WARN] 2023-04-23 13:41:12,400 main            com.targetindia.programs.CreateProducts [23] There was an error - Product name cannot be blank
+[TRACE] 2023-04-23 13:41:12,400 main            com.targetindia.programs.CreateProducts [26] main() execution is finished
+[TRACE] 2023-04-23 13:47:53,193 main            com.targetindia.programs.CreateProducts [10] starting to execute main()
+[TRACE] 2023-04-23 13:47:53,197 main            com.targetindia.programs.CreateProducts [15] new Product created
+[ WARN] 2023-04-23 13:47:53,197 main            com.targetindia.programs.CreateProducts [25] Invalid id supplied
+[TRACE] 2023-04-23 13:47:53,197 main            com.targetindia.programs.CreateProducts [31] main() execution is finished
+[TRACE] 2023-04-23 13:48:05,388 main            com.targetindia.programs.CreateProducts [10] starting to execute main()
+[TRACE] 2023-04-23 13:48:05,390 main            com.targetindia.programs.CreateProducts [15] new Product created
+[TRACE] 2023-04-23 13:48:05,390 main            com.targetindia.programs.CreateProducts [17] assigned 123 to p1.id
+[ WARN] 2023-04-23 13:48:05,390 main            com.targetindia.programs.CreateProducts [28] There was an error - Product name cannot be blank
+[TRACE] 2023-04-23 13:48:05,391 main            com.targetindia.programs.CreateProducts [31] main() execution is finished
+[TRACE] 2023-04-23 13:52:37,268 main            com.targetindia.programs.CreateProducts [13] starting to execute main()
+[TRACE] 2023-04-23 13:52:37,271 main            com.targetindia.programs.CreateProducts [18] new Product created
+[TRACE] 2023-04-23 13:52:37,272 main            com.targetindia.programs.CreateProducts [20] assigned 123 to p1.id
+[ WARN] 2023-04-23 13:52:37,272 main            com.targetindia.programs.CreateProducts [31] Product name cannot be null or blank!
+[TRACE] 2023-04-23 13:52:37,272 main            com.targetindia.programs.CreateProducts [36] main() execution is finished
+[TRACE] 2023-04-23 13:52:54,841 main            com.targetindia.programs.CreateProducts [13] starting to execute main()
+[TRACE] 2023-04-23 13:52:54,843 main            com.targetindia.programs.CreateProducts [18] new Product created
+[TRACE] 2023-04-23 13:52:54,843 main            com.targetindia.programs.CreateProducts [20] assigned 123 to p1.id
+[TRACE] 2023-04-23 13:52:54,843 main            com.targetindia.programs.CreateProducts [22] assigned Lenovo thinkpad laptop to p1.name
+[ WARN] 2023-04-23 13:52:54,843 main            com.targetindia.programs.CreateProducts [29] Product price must be > 0
+[TRACE] 2023-04-23 13:52:54,843 main            com.targetindia.programs.CreateProducts [36] main() execution is finished
+[TRACE] 2023-04-23 13:53:20,164 main            com.targetindia.programs.CreateProducts [13] starting to execute main()
+[TRACE] 2023-04-23 13:53:20,166 main            com.targetindia.programs.CreateProducts [18] new Product created
+[TRACE] 2023-04-23 13:53:20,167 main            com.targetindia.programs.CreateProducts [20] assigned 123 to p1.id
+[ WARN] 2023-04-23 13:53:20,167 main            com.targetindia.programs.CreateProducts [31] Product name cannot be null or blank!
+[TRACE] 2023-04-23 13:53:20,167 main            com.targetindia.programs.CreateProducts [36] main() execution is finished
+[TRACE] 2023-04-23 13:53:37,395 main            com.targetindia.programs.CreateProducts [13] starting to execute main()
+[TRACE] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [18] new Product created
+[ WARN] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [27] Invalid id supplied
+[TRACE] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [36] main() execution is finished
