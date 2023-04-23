@@ -1,0 +1,31 @@
+@startuml
+
+Phone <|-- MobilePhone
+MobilePhone <|-- CameraPhone
+MobilePhone <|-- SmartPhone
+
+interface Camera {}
+
+Camera <|.. CameraPhone
+Camera <|.. SmartPhone
+Camera <|.. DSLRCamera
+Camera <|.. AnalogCamera
+Camera <|.. PolaroidCamera
+Camera <|.. CCTVCamera
+Camera <|.. Laptop
+
+Computer <|-- Laptop
+
+interface MusicPlayer{}
+
+MusicPlayer <|... SmartPhone
+MusicPlayer <|... HomeTheatreMusicSystem
+MusicPlayer <|... CarMusicSystem
+
+interface Radio{}
+
+Radio <|... SmartPhone
+Radio <|... HomeTheatreMusicSystem
+Radio <|... CarMusicSystem
+
+@enduml

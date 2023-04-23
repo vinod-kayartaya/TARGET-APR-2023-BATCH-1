@@ -1,0 +1,16 @@
+@startuml
+
+interface A {
+    + foo(): int
+}
+
+interface B {
+    + foo(): String
+}
+
+A <|.. C
+B <|.. C
+
+
+
+@enduml
