@@ -211,3 +211,37 @@
 [TRACE] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [18] new Product created
 [ WARN] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [27] Invalid id supplied
 [TRACE] 2023-04-23 13:53:37,397 main            com.targetindia.programs.CreateProducts [36] main() execution is finished
+[TRACE] 2023-04-29 10:16:48,904 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-29 10:16:48,905 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [14] input1 is 2345
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [16] input2 is 33
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [18] numerator is 2345
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [20] denominator is 33
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [22] quotient is 71
+[TRACE] 2023-04-29 10:16:48,906 main            com.targetindia.programs.ExceptionDemo [24] remainder is 2
+[TRACE] 2023-04-29 10:24:43,770 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-29 10:24:43,771 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-29 10:24:43,771 main            com.targetindia.programs.ExceptionDemo [14] input1 is 1234
+[TRACE] 2023-04-29 10:24:43,771 main            com.targetindia.programs.ExceptionDemo [16] input2 is 456
+[TRACE] 2023-04-29 10:24:43,772 main            com.targetindia.programs.ExceptionDemo [18] numerator is 1234
+[TRACE] 2023-04-29 10:24:43,772 main            com.targetindia.programs.ExceptionDemo [20] denominator is 456
+[TRACE] 2023-04-29 10:24:43,772 main            com.targetindia.programs.ExceptionDemo [22] quotient is 2
+[TRACE] 2023-04-29 10:24:43,772 main            com.targetindia.programs.ExceptionDemo [24] remainder is 322
+[TRACE] 2023-04-29 10:25:49,597 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-29 10:25:49,599 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-29 10:25:49,599 main            com.targetindia.programs.ExceptionDemo [14] input1 is 1234
+[TRACE] 2023-04-29 10:25:49,599 main            com.targetindia.programs.ExceptionDemo [16] input2 is 0
+[TRACE] 2023-04-29 10:25:49,599 main            com.targetindia.programs.ExceptionDemo [18] numerator is 1234
+[TRACE] 2023-04-29 10:25:49,600 main            com.targetindia.programs.ExceptionDemo [20] denominator is 0
+[ WARN] 2023-04-29 10:25:49,600 main            com.targetindia.programs.ExceptionDemo [29] Cannot divide an integer by zero!
+[TRACE] 2023-04-29 10:25:49,600 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-29 10:25:49,600 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method
+[TRACE] 2023-04-29 10:26:02,336 main            com.targetindia.programs.ExceptionDemo [44] started executing main() method
+[TRACE] 2023-04-29 10:26:02,338 main            com.targetindia.programs.ExceptionDemo [11] started the divideNumbersFromCLI() method
+[TRACE] 2023-04-29 10:26:02,338 main            com.targetindia.programs.ExceptionDemo [14] input1 is 1234
+[TRACE] 2023-04-29 10:26:02,339 main            com.targetindia.programs.ExceptionDemo [16] input2 is asd
+[TRACE] 2023-04-29 10:26:02,339 main            com.targetindia.programs.ExceptionDemo [18] numerator is 1234
+[ WARN] 2023-04-29 10:26:02,339 main            com.targetindia.programs.ExceptionDemo [32] Only int arguments were expected
+[TRACE] 2023-04-29 10:26:02,339 main            com.targetindia.programs.ExceptionDemo [37] doing some cleanup activities in the finally block...
+[TRACE] 2023-04-29 10:26:02,339 main            com.targetindia.programs.ExceptionDemo [40] returning from divideNumbersFromCLI() back to main()
+[TRACE] 2023-04-29 10:26:02,340 main            com.targetindia.programs.ExceptionDemo [48] finished executing the main() method

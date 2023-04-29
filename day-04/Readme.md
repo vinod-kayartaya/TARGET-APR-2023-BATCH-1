@@ -51,7 +51,6 @@ Solution - _Choose between interface A and interface B_
 
 ![Exception hierarchy](../out/day-04/exceptions/exceptions.png)
 
-
 ### Handling exceptions
 
 ```java
