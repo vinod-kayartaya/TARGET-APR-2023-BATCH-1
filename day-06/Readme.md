@@ -35,6 +35,7 @@ InputStream <|-- ObjectInputStream
 FilterInputStream <|-- BufferedInputStream
 FilterInputStream <|-- DataInputStream
 
+
 class DataInputStream {
     + read(): int
     + readByte(): byte
@@ -51,3 +52,5 @@ class DataInputStream {
 note right of DataInputStream: The readLine() method is deprecated
 @enduml
 ```
+
+![](./concept2.dio.png)
