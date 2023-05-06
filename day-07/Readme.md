@@ -97,6 +97,27 @@ List <|.. ArrayList
 List <|.. LinkedList
 List <|.. Vector
 Vector <|-- Stack
+
+note right of Iterable: an Iterable produces an Iterator
+
+class HashSet<T>{}
+class TreeSet<T>{}
+class LinkedHashSet<T>{}
+class Hashtable<T>{}
+interface NavigatableSet<T>{}
+interface SortedSet<T>{}
+
+Set <|.. HashSet
+Set <|.. LinkedHashSet
+Set <|.. TreeSet
+Set <|.. Hashtable
+Set <|-- SortedSet
+NavigatableSet <|.. TreeSet
+SortedSet <|-- NavigatableSet
+Hashtable <|-- Properties
+HashSet <|-- LinkedHashSet
+
+
 @enduml
 ```
 
@@ -125,6 +146,32 @@ Vector <|-- Stack
 1. Stack
     - since 1.0
     - provides the standard _STACK_ operations such as _push()_ or _pop()_ etc.
+
+Set is an interface that does not provide any additional methods (until Java 1.8). A set object does not allow duplicate entries. Following are the choices of implementation we have:
+
+1. HashSet
+    - does not guarantee the order of retrieval to be same as order of insertion
+    - internally uses another collection type called `HashMap`, which internally uses an array of object references to store the data
+    - this must be the preferred Set implementation, since arrays are faster than other data structures, during retrieval.
+    - in order to prevent the insertion of duplicate values, this class depends on the element's `hashCode()` and `equals()` methods.
+1. LinkedHashSet
+    - uses a linked list to store the data
+    - uses `hashCode` and `equals` for duplicate check
+    - assures the order of retrieval to be same as order of insertion
+1. TreeSet
+    - assures that the order retrieval is ascending order of element's natural ordering
+    - uses a red-black-tree for store data
+    - __DOES NOT REQUIRE `hashCode` and `equals`__ methods in the element's type
+1. Hashtable
+    - legacy (since 1.0)
+    - has methods marked as _synchronized_ for thread safety
+    - requires `hashCode` and `equals` methods in the element
+
+
+
+
+
+
 
 
 It's a good practice to use the itnerface names for function's parameters and return types.
