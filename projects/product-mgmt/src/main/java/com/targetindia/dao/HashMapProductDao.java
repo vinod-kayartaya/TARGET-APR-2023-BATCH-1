@@ -43,4 +43,23 @@ public class HashMapProductDao {
         Collections.sort(list, (p1, p2) -> p1.getName().compareTo(p2.getName()));
         return list;
     }
+
+    public Product getProductById(int id){
+        // TODO: search and return the product with the given id
+        return null;
+    }
+
+    public List<Product> getProductsByCategory(String category){
+        // TODO: Search products belonging to the given category
+        return null;
+    }
+    public List<Product> getProductsByName(String name){
+        // TODO: Search products having the given 'name' in their product-name (partial match is enough)
+        return null;
+    }
+    public List<Product> getProductsByPriceRange(double min, double max){
+        // TODO: Search products having price between 'min' and 'max' and return the same
+        return null;
+    }
+
 }
