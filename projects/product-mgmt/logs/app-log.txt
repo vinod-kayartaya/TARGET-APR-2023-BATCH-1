@@ -1,0 +1,7 @@
+[TRACE] 2023-05-07 13:20:34,287 main            com.targetindia.App [12] starting the app
+[TRACE] 2023-05-07 13:20:34,288 main            com.targetindia.App [14] terminating the app gracefully
+[TRACE] 2023-05-07 13:42:19,197 main            com.targetindia.App [52] starting the app
+[TRACE] 2023-05-07 13:42:41,379 main            com.targetindia.App [54] terminating the app gracefully
+[TRACE] 2023-05-07 13:55:57,360 main            com.targetindia.App [85] starting the app
+[TRACE] 2023-05-07 13:58:04,763 main            com.targetindia.App [91] starting the app
+[TRACE] 2023-05-07 13:59:39,997 main            com.targetindia.App [102] starting the app
