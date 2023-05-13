@@ -1,8 +1,15 @@
-[TRACE] 2023-05-07 13:20:34,287 main            com.targetindia.App [12] starting the app
-[TRACE] 2023-05-07 13:20:34,288 main            com.targetindia.App [14] terminating the app gracefully
-[TRACE] 2023-05-07 13:42:19,197 main            com.targetindia.App [52] starting the app
-[TRACE] 2023-05-07 13:42:41,379 main            com.targetindia.App [54] terminating the app gracefully
-[TRACE] 2023-05-07 13:55:57,360 main            com.targetindia.App [85] starting the app
-[TRACE] 2023-05-07 13:58:04,763 main            com.targetindia.App [91] starting the app
-[TRACE] 2023-05-07 13:59:39,997 main            com.targetindia.App [102] starting the app
-[TRACE] 2023-05-07 14:16:12,971 main            com.targetindia.App [102] starting the app
+[TRACE] 2023-05-13 12:23:54,853 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:23:54,885 main            com.targetindia.dao.DaoFactory [18] discriminator is hashmap 
+[TRACE] 2023-05-13 12:24:58,079 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:24:58,097 main            com.targetindia.dao.DaoFactory [18] discriminator is hashmap 
+[TRACE] 2023-05-13 12:26:08,732 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:26:08,749 main            com.targetindia.dao.DaoFactory [18] discriminator is hashmap 
+[TRACE] 2023-05-13 12:26:08,749 main            com.targetindia.dao.DaoFactory [26] discriminator='hashmap '
+[TRACE] 2023-05-13 12:27:01,599 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:27:01,627 main            com.targetindia.dao.DaoFactory [18] discriminator is hashmap      
+[TRACE] 2023-05-13 12:27:01,627 main            com.targetindia.dao.DaoFactory [26] discriminator='hashmap'
+[TRACE] 2023-05-13 12:27:08,237 main            com.targetindia.App [189] terminating the app gracefully
+[TRACE] 2023-05-13 12:34:01,325 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:34:20,417 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:34:40,888 main            com.targetindia.App [187] starting the app
+[TRACE] 2023-05-13 12:35:12,947 main            com.targetindia.App [187] starting the app

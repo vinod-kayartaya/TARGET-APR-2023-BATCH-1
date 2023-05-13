@@ -103,18 +103,15 @@ note right of Iterable: an Iterable produces an Iterator
 class HashSet<T>{}
 class TreeSet<T>{}
 class LinkedHashSet<T>{}
-class Hashtable<T>{}
 interface NavigatableSet<T>{}
 interface SortedSet<T>{}
 
 Set <|.. HashSet
 Set <|.. LinkedHashSet
 Set <|.. TreeSet
-Set <|.. Hashtable
 Set <|-- SortedSet
 NavigatableSet <|.. TreeSet
 SortedSet <|-- NavigatableSet
-Hashtable <|-- Properties
 HashSet <|-- LinkedHashSet
 
 

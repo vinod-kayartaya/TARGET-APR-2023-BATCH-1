@@ -2,9 +2,11 @@ package com.targetindia;
 
 import com.targetindia.model.Product;
 import com.targetindia.service.ProductManager;
+import com.targetindia.service.ServiceException;
 import com.targetindia.utils.KeyboardUtil;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.InputMismatchException;
 import java.util.List;
 
 @Slf4j
@@ -19,21 +21,96 @@ public class App {
             switch (choice) {
                 case 1:
                     displayAllProducts();
+                    break;
                 case 2:
+                    displayProductForId();
+                    break;
                 case 3:
+                    displayProductsForCategory();
+                    break;
+                case 6:
+                    acceptAndAddProductDetails();
+                    break;
                 case 4:
                 case 5:
-                case 6:
                 case 7:
                 case 8:
                     System.out.printf("Choice #%d is not ready yet!%n", choice);
                     break;
+
                 default:
                     System.out.println("Invalid choice. Please retry.");
             }
         }
 
         System.out.println("Thank you for using our app. Have a nice day");
+    }
+
+    private void acceptAndAddProductDetails() {
+        try {
+            System.out.println("Enter new product details: ");
+            int id = KeyboardUtil.getInt("ID               : ");
+            String name = KeyboardUtil.getString("Name             : ");
+            String category = KeyboardUtil.getString("Category         : ");
+            String quantityPerUnit = KeyboardUtil.getString("Quantity per unit: ");
+            double unitPrice = KeyboardUtil.getDouble("Unit price       : ");
+            int unitsInStock = KeyboardUtil.getInt("Units in stock   : ");
+
+            Product p = new Product();
+            p.setId(id);
+            p.setName(name);
+            p.setCategory(category);
+            p.setQuantityPerUnit(quantityPerUnit);
+            p.setUnitPrice(unitPrice);
+            p.setUnitsInStock(unitsInStock);
+
+            pm.addNewProduct(p);
+            System.out.println("New product data added successfully!");
+
+
+        } catch (InputMismatchException e) {
+            System.out.println("Wrong value type!");
+        } catch(ServiceException e){
+            System.out.printf("Encountered one or more errors: %n%s%n", e.getMessage());
+        }
+        catch(Exception e){
+            System.out.printf("There was an error: %s%n", e.getMessage());
+        }
+        line();
+    }
+
+    private void displayProductsForCategory() {
+        try {
+            String category = KeyboardUtil.getString("Enter category to search: ");
+            List<Product> products = pm.getProductsByCategory(category);
+            if (products.size() == 0) {
+                System.out.printf("No products found in the category '%s'%n", category);
+            } else {
+                displayGivenProducts(products);
+            }
+        } catch (Exception e) {
+            System.out.printf("There was an error: %s%n", e.getMessage());
+        }
+    }
+
+    private void displayProductForId() {
+        try {
+            int id = KeyboardUtil.getInt("Enter id to search: ");
+            Product p = pm.getProduct(id);
+            if (p == null) {
+                System.out.printf("No product found for id %d%n", id);
+            } else {
+                System.out.printf("Name          : %s%n", p.getName());
+                System.out.printf("Category      : %s%n", p.getCategory());
+                System.out.printf("Unit price    : %s%n", p.getUnitPrice());
+                System.out.printf("Units in stock: %s%n", p.getUnitsInStock());
+                System.out.printf("Quantity desc : %s%n", p.getQuantityPerUnit());
+            }
+        } catch (InputMismatchException e) {
+            System.out.printf("Invalid value type for id%n");
+        } catch (Exception e) {
+            System.out.printf("There was an error: %s%n", e.getMessage());
+        }
     }
 
     void line() {
@@ -56,7 +133,15 @@ public class App {
     }
 
     private void displayAllProducts() {
-        List<Product> list = pm.getAllProducts();
+        try {
+            List<Product> list = pm.getAllProducts();
+            displayGivenProducts(list);
+        } catch (Exception e) {
+            System.out.printf("There was an error: %s%n", e.getMessage());
+        }
+    }
+
+    private void displayGivenProducts(List<Product> list) {
         line(109);
         System.out.printf("%4s %-30s %-20s %-30s %10s %10s%n",
                 "ID",

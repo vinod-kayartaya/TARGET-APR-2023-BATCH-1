@@ -4,7 +4,7 @@ import com.targetindia.model.Product;
 
 import java.util.*;
 
-public class HashMapProductDao {
+public class HashMapProductDao implements ProductDao {
     // we may use a HashMap to store all product details, that can be identified using their respective ids
     private Map<Integer, Product> map = new HashMap<>();
 
@@ -37,29 +37,51 @@ public class HashMapProductDao {
         map.put(p.getId(), p);
     }
 
-    public List<Product> getAllProducts() {
+    public List<Product> getAllProducts() throws DaoException {
         List<Product> list = new ArrayList<>();
         list.addAll(map.values());
         Collections.sort(list, (p1, p2) -> p1.getName().compareTo(p2.getName()));
         return list;
     }
 
-    public Product getProductById(int id){
-        // TODO: search and return the product with the given id
-        return null;
+    public Product getProductById(int id) throws DaoException {
+        return map.get(id);
     }
 
-    public List<Product> getProductsByCategory(String category){
-        // TODO: Search products belonging to the given category
-        return null;
+    @Override
+    public void updateProduct(Product p) throws DaoException {
+
     }
-    public List<Product> getProductsByName(String name){
+
+    @Override
+    public void deleteProduct(int id) throws DaoException {
+
+    }
+
+    public List<Product> getProductsByCategory(String category) throws DaoException {
+        // this is how it was done prior to Java 1.8 Streams
+        // WE SHALL UPDATE THIS LATER ONCE WE LEARN ABOUT STREAMS
+        List<Product> list = new ArrayList<>();
+        for (Product p : map.values()) {
+            if (p.getCategory().equalsIgnoreCase(category)) {
+                list.add(p);
+            }
+        }
+        return list;
+    }
+
+    public List<Product> getProductsByName(String name) throws DaoException {
         // TODO: Search products having the given 'name' in their product-name (partial match is enough)
         return null;
     }
-    public List<Product> getProductsByPriceRange(double min, double max){
+
+    public List<Product> getProductsByPriceRange(double min, double max) throws DaoException {
         // TODO: Search products having price between 'min' and 'max' and return the same
         return null;
+    }
+
+    public void addProduct(Product p) throws DaoException {
+        map.put(p.getId(), p);
     }
 
 }
