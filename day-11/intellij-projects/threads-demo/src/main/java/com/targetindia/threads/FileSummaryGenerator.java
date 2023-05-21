@@ -43,12 +43,6 @@ public class FileSummaryGenerator extends Thread {
             log.warn("Error!", e);
         }
 
-        // filename = "HelloWorld.java"
-        // outFilename = "HelloWorld_summary_<timestamp>.txt"
-        String outFilename = filename.substring(0, filename.lastIndexOf("."))
-                + "_summary_"
-                + System.currentTimeMillis()
-                + ".txt";
         try {
             PrintWriter out = new PrintWriter(writer);
             out.printf("Input filename: %s%n", filename);
@@ -56,12 +50,13 @@ public class FileSummaryGenerator extends Thread {
             out.printf("Number of words: %d%n", nWords);
             out.printf("Number of letters: %d%n", nLetters);
             out.println("---------------------------------------------------");
+            log.trace("Summary for the file '{}' has been updated to the summary.txt",
+                    filename);
             // do not close the "out", as the output stream needs to be open for other threads to write
         } catch (Exception e) {
             log.warn("Error!", e);
         }
-        log.trace("The thread '{}' terminated and the outputfile '{}' created!",
-                Thread.currentThread().getName(),
-                outFilename);
+        log.trace("The thread '{}' terminated",
+                Thread.currentThread().getName());
     }
 }

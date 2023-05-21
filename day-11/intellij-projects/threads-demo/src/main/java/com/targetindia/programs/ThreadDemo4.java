@@ -3,6 +3,7 @@ package com.targetindia.programs;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -11,9 +12,9 @@ public class ThreadDemo4 {
     @SneakyThrows
     public static void main(String[] args) {
         System.out.println("Start of ThreadDemo3.main()");
-        List<String> list = new Vector<>();
+        List<String> list = new ArrayList<>();
 
-        Thread t1 = new Thread(()-> sentenceToWords(list, "jack jill went up the hill"), "t01");
+        Thread t1 = new Thread(()-> sentenceToWords(list, "jack and jill went up the hill"), "t01");
         t1.start();
         Thread t2 = new Thread(()-> sentenceToWords(list, "the quick brown fox jumped over the lazy poor dog"),  "t02");
         t2.start();
@@ -21,6 +22,7 @@ public class ThreadDemo4 {
         t1.join(); // the current thread (main, in this case) is timed-waiting until t1 is terminated
         t2.join();
         System.out.println(list);
+        System.out.println(list.size());
         System.out.println("End of ThreadDemo3.main()");
     }
 
@@ -30,7 +32,7 @@ public class ThreadDemo4 {
         for(String a: ar){
             list.add(a);
             log.trace("adding {} to the list", a);
-            Thread.sleep(1);
+            // Thread.sleep(1);
         }
     }
 

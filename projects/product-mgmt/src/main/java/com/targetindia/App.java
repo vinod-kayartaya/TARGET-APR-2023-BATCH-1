@@ -31,19 +31,105 @@ public class App {
                 case 6:
                     acceptAndAddProductDetails();
                     break;
+                case 7:
+                    editProductDetails();
+                    break;
                 case 4:
                 case 5:
-                case 7:
-                case 8:
                     System.out.printf("Choice #%d is not ready yet!%n", choice);
+                    break;
+                case 8:
+                    deleteProduct();
                     break;
 
                 default:
                     System.out.println("Invalid choice. Please retry.");
             }
+            line('=');
         }
 
         System.out.println("Thank you for using our app. Have a nice day");
+    }
+
+    private void deleteProduct() {
+        try {
+            int id = KeyboardUtil.getInt("Enter product id: ");
+            Product p = pm.getProduct(id);
+
+            if (p == null) {
+                System.out.printf("No product found for id %d%n", id);
+            } else {
+                displayProductDetails(p);
+
+                String ans = KeyboardUtil.getString("Are you sure to delete this product? (yes/no): (no) ");
+                if(ans.equalsIgnoreCase("yes")){
+                    pm.deleteProduct(id);
+                    System.out.printf("Product with id %d is deleted successfully!%n", id);
+                }
+                else {
+                    System.out.printf("Product with id %d IS NOT deleted.%n", id);
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.printf("Invalid input. Please try again.");
+            log.warn("Error while accepting id for deleting", e);
+        }
+    }
+
+    private void editProductDetails() {
+        try {
+            int id = KeyboardUtil.getInt("Enter product id: ");
+            Product p = pm.getProduct(id);
+            if (p == null) {
+                System.out.printf("No product found for the id %d%n", id);
+                return;
+            }
+
+            String input;
+            input = KeyboardUtil.getString(String.format("Enter name: (%s) ", p.getName()));
+            if (!input.isBlank()) {
+                p.setName(input);
+            } // else p will retain its original value
+
+            input = KeyboardUtil.getString(String.format("Enter category: (%s) ", p.getCategory()));
+            if (!input.isBlank()) {
+                p.setCategory(input);
+            } // else p will retain its original value
+
+            input = KeyboardUtil.getString(String.format("Enter quantity per unit: (%s) ", p.getQuantityPerUnit()));
+            if (!input.isBlank()) {
+                p.setQuantityPerUnit(input);
+            } // else p will retain its original value
+
+            input = KeyboardUtil.getString(String.format("Enter unit price: (%s) ", p.getUnitPrice()));
+            if (!input.isBlank()) {
+                try {
+                    p.setUnitPrice(Double.parseDouble(input));
+                } catch (NumberFormatException e) {
+                    log.warn("user entered non-numeric value {} for unit price while editing product {}",
+                            input, p, e);
+                    System.out.println("Your entered value is ignored since it is non-numeric");
+                }
+            } // else p will retain its original value
+
+            input = KeyboardUtil.getString(String.format("Enter units in stock: (%s) ", p.getUnitsInStock()));
+            if (!input.isBlank()) {
+                try {
+                    p.setUnitsInStock(Integer.parseInt(input));
+                } catch (NumberFormatException e) {
+                    log.warn("user entered non-numeric value {} for units in stock while editing product {}",
+                            input, p, e);
+                    System.out.println("Your entered value is ignored since it is non-numeric");
+                }
+            } // else p will retain its original value
+
+            pm.updateProduct(p);
+            System.out.println("Product details have been updated successfully");
+        } catch (Exception e) {
+            System.out.printf("Invalid input. Please try again.");
+            log.warn("Error while accepting id for editing", e);
+        }
     }
 
     private void acceptAndAddProductDetails() {
@@ -70,10 +156,9 @@ public class App {
 
         } catch (InputMismatchException e) {
             System.out.println("Wrong value type!");
-        } catch(ServiceException e){
+        } catch (ServiceException e) {
             System.out.printf("Encountered one or more errors: %n%s%n", e.getMessage());
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.printf("There was an error: %s%n", e.getMessage());
         }
         line();
@@ -100,17 +185,21 @@ public class App {
             if (p == null) {
                 System.out.printf("No product found for id %d%n", id);
             } else {
-                System.out.printf("Name          : %s%n", p.getName());
-                System.out.printf("Category      : %s%n", p.getCategory());
-                System.out.printf("Unit price    : %s%n", p.getUnitPrice());
-                System.out.printf("Units in stock: %s%n", p.getUnitsInStock());
-                System.out.printf("Quantity desc : %s%n", p.getQuantityPerUnit());
+                displayProductDetails(p);
             }
         } catch (InputMismatchException e) {
             System.out.printf("Invalid value type for id%n");
         } catch (Exception e) {
             System.out.printf("There was an error: %s%n", e.getMessage());
         }
+    }
+
+    private static void displayProductDetails(Product p) {
+        System.out.printf("Name          : %s%n", p.getName());
+        System.out.printf("Category      : %s%n", p.getCategory());
+        System.out.printf("Unit price    : %s%n", p.getUnitPrice());
+        System.out.printf("Units in stock: %s%n", p.getUnitsInStock());
+        System.out.printf("Quantity desc : %s%n%n", p.getQuantityPerUnit());
     }
 
     void line() {

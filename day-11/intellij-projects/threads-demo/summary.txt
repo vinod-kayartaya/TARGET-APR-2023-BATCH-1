@@ -5,28 +5,28 @@ src/main/java/com/targetindia/programs/ThreadDemo1.java
 src/main/java/com/targetindia/threads/FileSummaryGenerator.java
 pom.xml
 ---------------------------------------------------
-Input filename: src/main/java/com/targetindia/threads/FileSummaryGenerator.java
 Input filename: src/main/java/com/targetindia/programs/HelloWorld.java
-Number of lines: 11
+Input filename: src/main/java/com/targetindia/threads/FileSummaryGenerator.java
+Number of lines: 62
+Number of words: 714
 Input filename: pom.xml
-Number of words: 56
+Number of letters: 1995
 Number of lines: 34
-Number of words: 321
-Number of letters: 1248
-Input filename: src/main/java/com/targetindia/programs/MethodReferenceDemo.java
-Number of lines: 17
 Input filename: src/main/java/com/targetindia/programs/ThreadDemo1.java
 Number of lines: 26
 Number of words: 286
 Number of letters: 904
 ---------------------------------------------------
+Input filename: src/main/java/com/targetindia/programs/MethodReferenceDemo.java
+Number of lines: 17
 Number of words: 131
----------------------------------------------------
-Number of letters: 222
----------------------------------------------------
-Number of lines: 67
-Number of words: 789
-Number of letters: 2220
----------------------------------------------------
 Number of letters: 464
+---------------------------------------------------
+Number of words: 321
+Number of letters: 1248
+---------------------------------------------------
+---------------------------------------------------
+Number of lines: 11
+Number of words: 56
+Number of letters: 222
 ---------------------------------------------------

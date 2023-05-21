@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 @Slf4j
 public class CsvProductDao implements ProductDao {
-    private Map<Integer, Product> map = new HashMap<>();
+    private Map<Integer, Product> map = new TreeMap<>();
 
     private void loadProductsFromCsvFile() {
         try (
@@ -59,7 +59,7 @@ public class CsvProductDao implements ProductDao {
             out.println("id,name,category,quantity_per_unit,unit_price,units_in_stock");
             map.values()
                     .stream()
-                    .map(p->String.format("%s,%s,%s,%s,%s,%s",
+                    .map(p -> String.format("%s,%s,%s,%s,%s,%s",
                             p.getId(),
                             p.getName(),
                             p.getCategory(),
@@ -84,11 +84,23 @@ public class CsvProductDao implements ProductDao {
     @Override
     public void updateProduct(Product p) throws DaoException {
         // after updating a product in the "map", call the saveProductsToCsvFile()
+        if (map.containsKey(p.getId())) {
+            map.put(p.getId(), p);
+            saveProductsToCsvFile();
+        } else {
+            throw new DaoException("Invalid product id for update");
+        }
     }
 
     @Override
     public void deleteProduct(int id) throws DaoException {
         // after deleting a product from the "map", call the saveProductsToCsvFile()
+        if (map.containsKey(id)) {
+            map.remove(id);
+            saveProductsToCsvFile();
+        } else {
+            throw new DaoException("Invalid product id for update");
+        }
     }
 
     public List<Product> getAllProducts() throws DaoException {

@@ -23,6 +23,16 @@ public class ProductManager {
         return dao.getProductById(id);
     }
 
+    public void updateProduct(Product product){
+        // TODO: do the validations here too
+        dao.updateProduct(product);
+    }
+
+    public void deleteProduct(int id){
+        // no value addition in the service layer for this method; simply delegating to DAO layer.
+        dao.deleteProduct(id);
+    }
+
     public List<Product> getProductsByCategory(String category) {
         return dao.getProductsByCategory(category);
     }
