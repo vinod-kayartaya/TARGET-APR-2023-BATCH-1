@@ -45,7 +45,6 @@ public class App {
                 default:
                     System.out.println("Invalid choice. Please retry.");
             }
-            line('=');
         }
 
         System.out.println("Thank you for using our app. Have a nice day");
