@@ -16,3 +16,7 @@ When we execute the above statement, the JDBC driver sends the SQL statement to 
 - **Security checks**: Checks the user's privileges for the requested operation on the requested table
 - **Generate execution plan**: An execution plan may involve selecting an appropriate index, join tables in an optimal order, using cached data. The goal is to execute the statement in the most efficient manner possible, considering the factors like - performance, resource utilization and query complexity
 - **Parameter placeholder recognition**: Reserves memory for the `?` placeholders, so that at later point in time, those memory areas can be filled with values, and then the command can be executed
+
+### ResultSet
+
+![](./resultset.dio.png)
