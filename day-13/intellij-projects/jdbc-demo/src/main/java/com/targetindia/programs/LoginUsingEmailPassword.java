@@ -40,7 +40,7 @@ public class LoginUsingEmailPassword {
         }
     }
 
-    public static void main_sql_injection(String[] args) throws Exception {
+    public static void main1(String[] args) throws Exception {
 
         String email = KeyboardUtil.getString("Enter email: ");
         String password = KeyboardUtil.getString("Enter password: ");
