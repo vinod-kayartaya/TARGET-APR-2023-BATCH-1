@@ -1863,3 +1863,17 @@ insert into employees (id, first_name, last_name, email, phone, salary, departme
 	at java.base/java.lang.Thread.run(Thread.java:1623)
 
 (truncated)
+[ WARN] 2023-05-28 12:50:59,904 main            com.targetindia.programs.AddEmployeesFromCsvFile [57] Error
+java.sql.BatchUpdateException: Duplicate entry '129' for key 'employees.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createBatchUpdateException(SQLError.java:224)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:816)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchInternal(ClientPreparedStatement.java:418)
+	at com.mysql.cj.jdbc.StatementImpl.executeBatch(StatementImpl.java:795)
+	at com.targetindia.programs.AddEmployeesFromCsvFile.main(AddEmployeesFromCsvFile.java:54)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '129' for key 'employees.PRIMARY'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeBatchSerially(ClientPreparedStatement.java:795)
+	... 3 more
