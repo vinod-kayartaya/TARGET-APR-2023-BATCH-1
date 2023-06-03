@@ -35,16 +35,16 @@
             <artifactId>h2</artifactId>
             <version>1.4.197</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate.orm</groupId>-->
-<!--            <artifactId>hibernate-core</artifactId>-->
-<!--            <version>6.2.4.Final</version>-->
-<!--        </dependency>-->
         <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>4.0.1</version>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.2.4.Final</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.eclipse.persistence</groupId>-->
+<!--            <artifactId>eclipselink</artifactId>-->
+<!--            <version>4.0.1</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
