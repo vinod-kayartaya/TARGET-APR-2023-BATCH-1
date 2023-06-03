@@ -45,3 +45,26 @@ database "RDBMS" {
     - update(), saveOrUpdate(), merge() --> executes an SQL UPDATE command for updating a record in the db for the given object
     - delete(), remove() --> deletes a record in the table corresponding to the object given
   - Query - an object that can be used to query for the entity objects
+
+![](hibernate-arch.dio.png)
+
+# JPA
+
+- A Java standard API for ORM
+- current version is 2
+- Only a set of interfaces and few factory classes
+- Depends on implementation of these APIs by 3rd party
+- Most important interfaces of JPA:
+  - jakarta.persistence.EntityManagerFactory (equivalent of org.hibernate.SessionFactory)
+  - jakarta.persistence.EntityManager (equivalent of org.hibernate.Session)
+  - jakarta.persistence.Query (equivalent of org.hibernate.Query)
+  - jakarta.persistence.TypedQuery
+  - jakarta.persistence.EntityTransaction (equivalent of org.hibernate.Transaction)
+- Different implementations are available:
+  - Hibernate
+  - Eclipselink (from Eclipse)
+  - OpenJPA (from Apache)
+  - Toplink (from Oracle)
+- this means, we can choose from different implementations based on performance and other factors
+
+![](./jpa-arch.dio.png)

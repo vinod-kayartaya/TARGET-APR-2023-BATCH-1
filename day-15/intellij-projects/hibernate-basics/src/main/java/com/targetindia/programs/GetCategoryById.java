@@ -15,6 +15,7 @@ public class GetCategoryById {
         int id = KeyboardUtil.getInt("Enter category id to search: ");
 
         Session session = HibernateUtil.getSession();
+        log.trace("session is an instanceof {} type", session.getClass().getName());
         Category c1 = session.get(Category.class, id);
         log.trace("category name = {}", c1.getCategoryName());
         log.trace("description = {}", c1.getDescription());
