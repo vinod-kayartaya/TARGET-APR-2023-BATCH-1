@@ -9,10 +9,9 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">Welcome#123</property>
 
-        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.show_sql">false</property>
         <property name="hibernate.format_sql">true</property>
 
-        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
 
         <mapping class="com.targetindia.entity.Category" />
     </session-factory>
