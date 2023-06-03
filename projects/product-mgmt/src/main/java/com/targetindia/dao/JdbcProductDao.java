@@ -10,17 +10,77 @@ import java.util.List;
 public class JdbcProductDao implements ProductDao {
     @Override
     public void addProduct(Product p) throws DaoException {
+        String sql = "insert into products (name, category, quantity_per_unit, unit_price, units_in_stock) values (?,?,?,?,?)";
+        try (
+                Connection conn = DbUtil.newConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+        ) {
+            conn.setAutoCommit(false);
+            stmt.setString(1, p.getName());
+            stmt.setString(2, p.getCategory());
+            stmt.setString(3, p.getQuantityPerUnit());
+            stmt.setDouble(4, p.getUnitPrice());
+            stmt.setInt(5, p.getUnitsInStock());
 
+            try {
+                stmt.execute(); // one or more of these in a single transaction
+                conn.commit();
+            } catch (Exception e) {
+                conn.rollback();
+                throw new DaoException(e);
+            }
+
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
     }
 
     @Override
     public Product getProductById(int id) throws DaoException {
-        return null;
+        String sql = "select * from products where id=?";
+
+        try (
+                Connection conn = DbUtil.newConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+        ) {
+            stmt.setInt(1, id);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return getProduct(rs);
+                }
+                return null;
+            }
+        } catch (Exception e) {
+            throw new DaoException(e);
+        }
     }
 
     @Override
     public void updateProduct(Product p) throws DaoException {
+        String sql = "update products set name=?, category=?, quantity_per_unit=?, unit_price=?, units_in_stock=? where id=?";
+        try (
+                Connection conn = DbUtil.newConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql);
+        ) {
+            conn.setAutoCommit(false);
+            stmt.setString(1, p.getName());
+            stmt.setString(2, p.getCategory());
+            stmt.setString(3, p.getQuantityPerUnit());
+            stmt.setDouble(4, p.getUnitPrice());
+            stmt.setInt(5, p.getUnitsInStock());
+            stmt.setInt(6, p.getId());
 
+            try {
+                stmt.execute(); // one or more of these in a single transaction
+                conn.commit();
+            } catch (Exception e) {
+                conn.rollback();
+                throw new DaoException(e);
+            }
+
+        } catch (SQLException e) {
+            throw new DaoException(e);
+        }
     }
 
     @Override
