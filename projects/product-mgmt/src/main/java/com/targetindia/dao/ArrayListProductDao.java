@@ -16,7 +16,7 @@ public class ArrayListProductDao implements ProductDao{
         p.setCategory("Computer accessories");
         p.setName("TVSE Keyboard");
         p.setUnitsInStock(4);
-        p.setUnitPrice(1200);
+        p.setUnitPrice(1200.0);
         p.setQuantityPerUnit("1 keyboard in 1 box");
         products.add(p);
     }

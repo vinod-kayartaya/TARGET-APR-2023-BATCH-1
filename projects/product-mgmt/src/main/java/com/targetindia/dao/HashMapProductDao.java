@@ -13,7 +13,7 @@ public class HashMapProductDao implements ProductDao {
         p.setId(12);
         p.setCategory("Beverage");
         p.setName("Diet Coke");
-        p.setUnitPrice(180);
+        p.setUnitPrice(180.0);
         p.setQuantityPerUnit("Pack of 6 cans");
         p.setUnitsInStock(50);
         map.put(p.getId(), p);
@@ -22,7 +22,7 @@ public class HashMapProductDao implements ProductDao {
         p.setId(67);
         p.setCategory("Condiments");
         p.setName("Yippie Noodles");
-        p.setUnitPrice(65);
+        p.setUnitPrice(65.0);
         p.setQuantityPerUnit("Pack of 4");
         p.setUnitsInStock(14);
         map.put(p.getId(), p);
@@ -31,7 +31,7 @@ public class HashMapProductDao implements ProductDao {
         p.setId(18);
         p.setCategory("Beverage");
         p.setName("Badaam Milk");
-        p.setUnitPrice(250);
+        p.setUnitPrice(250.0);
         p.setQuantityPerUnit("6 tetra packs");
         p.setUnitsInStock(35);
         map.put(p.getId(), p);
