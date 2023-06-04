@@ -14,8 +14,7 @@ public class Product {
     String productName;
     @Column(name = "quantity_per_unit")
     String quantityPerUnit;
-    @Column(name = "supplier_id")
-    Integer supplierId;
+
     @Column(name = "unit_price")
     Double unitPrice;
     @Column(name = "units_in_stock")
@@ -30,7 +29,12 @@ public class Product {
     // Product HAS-A Category
     // Many products belong to one category
     // for every product, fetches the corresponding category using a join statement, eagerly!
-    @ManyToOne //(fetch = FetchType.LAZY)
+    @ManyToOne //(fetch = FetchType.LAZY) // (fetch = FetchType.EAGER) is the default for @ManyToOne
     @JoinColumn(name = "category_id")
     Category category;
+
+    // Many products supplied by One Supplier
+    @ManyToOne
+    @JoinColumn(name = "supplier_id")
+    Supplier supplier;
 }

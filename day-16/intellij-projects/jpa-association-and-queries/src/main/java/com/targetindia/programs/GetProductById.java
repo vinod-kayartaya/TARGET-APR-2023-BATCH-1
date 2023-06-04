@@ -31,5 +31,9 @@ public class GetProductById {
         log.trace("unit price = {}", pr.getUnitPrice());
         log.trace("category = {}", pr.getCategory().getCategoryName());
         log.trace("description = {}", pr.getCategory().getDescription());
+        log.trace("Supplied by {}", pr.getSupplier().getCompanyName());
+        log.trace("Supplied from the city of {}, {}",
+                pr.getSupplier().getAddress().getCity(),
+                pr.getSupplier().getAddress().getCountry());
     }
 }
