@@ -2,6 +2,8 @@
 
 - ORM is a tool/technique to help developers work with RDBMS effectively and seamlessly
 - Provides a high level abstraction and hides the JDBC part of working with databases
+- In our application we do not have directly deal with the underlying RDBMS
+- No SQL needed to included in your code
 
 ```plantuml
 @startuml
@@ -53,6 +55,8 @@ database "RDBMS" {
 - A Java standard API for ORM
 - current version is 2
 - Only a set of interfaces and few factory classes
+  - `jakarta.persistence.*`
+    - earlier, `javax.persistence.*`
 - Depends on implementation of these APIs by 3rd party
 - Most important interfaces of JPA:
   - jakarta.persistence.EntityManagerFactory (equivalent of org.hibernate.SessionFactory)
@@ -61,8 +65,8 @@ database "RDBMS" {
   - jakarta.persistence.TypedQuery
   - jakarta.persistence.EntityTransaction (equivalent of org.hibernate.Transaction)
 - Different implementations are available:
-  - Hibernate
-  - Eclipselink (from Eclipse)
+  - Hibernate (`org.hibernate.jpa.HibernatePersistenceProvider`)
+  - Eclipselink (from Eclipse, `org.eclipse.persistence.jpa.PersistenceProvider`)
   - OpenJPA (from Apache)
   - Toplink (from Oracle)
 - this means, we can choose from different implementations based on performance and other factors
