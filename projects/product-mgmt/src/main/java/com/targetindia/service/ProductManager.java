@@ -23,12 +23,12 @@ public class ProductManager {
         return dao.getProductById(id);
     }
 
-    public void updateProduct(Product product){
+    public void updateProduct(Product product) {
         // TODO: do the validations here too
         dao.updateProduct(product);
     }
 
-    public void deleteProduct(int id){
+    public void deleteProduct(int id) {
         // no value addition in the service layer for this method; simply delegating to DAO layer.
         dao.deleteProduct(id);
     }
@@ -73,4 +73,14 @@ public class ProductManager {
 
     }
 
+    public List<Product> getProductsByName(String name) {
+        return dao.getProductsByName(name);
+    }
+
+    public List<Product> getProductsByPriceRange(double min, double max) {
+        if (min > max) {
+            return dao.getProductsByPriceRange(max, min);
+        }
+        return dao.getProductsByPriceRange(min, max);
+    }
 }

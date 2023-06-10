@@ -35,8 +35,10 @@ public class App {
                     editProductDetails();
                     break;
                 case 4:
+                    acceptNameAndDisplayProducts();
+                    break;
                 case 5:
-                    System.out.printf("Choice #%d is not ready yet!%n", choice);
+                    acceptPriceRangeAndDisplayProducts();
                     break;
                 case 8:
                     deleteProduct();
@@ -50,6 +52,38 @@ public class App {
         System.out.println("Thank you for using our app. Have a nice day");
     }
 
+    private void acceptPriceRangeAndDisplayProducts() {
+        try {
+            double min = KeyboardUtil.getDouble("Enter minimum price: ");
+            double max = KeyboardUtil.getDouble("Enter maximum price: ");
+            List<Product> list = pm.getProductsByPriceRange(min, max);
+            if (list.isEmpty()) {
+                System.out.printf("No products found matching the given price range (%.1f to %.1f)%n", min, max);
+                return;
+            }
+            displayGivenProducts(list);
+        } catch (Exception e) {
+            System.out.printf("OOPS! Something went wrong.");
+            log.warn("Error while accepting id for deleting", e);
+        }
+    }
+
+    private void acceptNameAndDisplayProducts() {
+        String name = KeyboardUtil.getString("Enter name to search: ");
+        try {
+            List<Product> list = pm.getProductsByName(name);
+            if (list.isEmpty()) {
+                System.out.printf("No products found matching '%s' for name%n", name);
+                return;
+            }
+
+            displayGivenProducts(list);
+        } catch (Exception e) {
+            System.out.printf("OOPS! Something went wrong.");
+            log.warn("Error while accepting id for deleting", e);
+        }
+    }
+
     private void deleteProduct() {
         try {
             int id = KeyboardUtil.getInt("Enter product id: ");
@@ -61,11 +95,10 @@ public class App {
                 displayProductDetails(p);
 
                 String ans = KeyboardUtil.getString("Are you sure to delete this product? (yes/no): (no) ");
-                if(ans.equalsIgnoreCase("yes")){
+                if (ans.equalsIgnoreCase("yes")) {
                     pm.deleteProduct(id);
                     System.out.printf("Product with id %d is deleted successfully!%n", id);
-                }
-                else {
+                } else {
                     System.out.printf("Product with id %d IS NOT deleted.%n", id);
                 }
             }

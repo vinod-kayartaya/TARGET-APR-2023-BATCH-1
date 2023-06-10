@@ -4,6 +4,7 @@ import com.targetindia.model.Product;
 import com.targetindia.utils.JpaUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.TypedQuery;
 import org.hibernate.HibernateException;
 
 import java.util.List;
@@ -35,7 +36,7 @@ public class JpaProductDao implements ProductDao {
 
     @Override
     public Product getProductById(int id) throws DaoException {
-        try(EntityManager em = JpaUtil.createEntityManager()){
+        try (EntityManager em = JpaUtil.createEntityManager()) {
             return em.find(Product.class, id);
         }// em.close() called here, and DB connection is also closed
         catch (Exception e) {
@@ -71,8 +72,8 @@ public class JpaProductDao implements ProductDao {
     public void deleteProduct(int id) throws DaoException {
         try (EntityManager em = JpaUtil.createEntityManager()) {
             Product p = em.find(Product.class, id);
-            if(p==null){
-                throw new DaoException("Invalid id "+ id + " for deletion");
+            if (p == null) {
+                throw new DaoException("Invalid id " + id + " for deletion");
             }
 
             EntityTransaction tx = em.getTransaction();
@@ -98,21 +99,40 @@ public class JpaProductDao implements ProductDao {
 
     @Override
     public List<Product> getAllProducts() throws DaoException {
-        return null;
+        try (EntityManager em = JpaUtil.createEntityManager()) {
+            TypedQuery<Product> qry = em.createQuery("from Product", Product.class);
+            return qry.getResultList();
+        }
     }
 
     @Override
     public List<Product> getProductsByCategory(String category) throws DaoException {
-        return null;
+        try (EntityManager em = JpaUtil.createEntityManager()) {
+            TypedQuery<Product> qry = em.createQuery(
+                    "from Product where lower(category)=lower(?1)", Product.class);
+            qry.setParameter(1, category);
+            return qry.getResultList();
+        }
     }
 
     @Override
     public List<Product> getProductsByName(String name) throws DaoException {
-        return null;
+        try (EntityManager em = JpaUtil.createEntityManager()) {
+            TypedQuery<Product> qry = em.createQuery(
+                    "from Product where lower(name) like lower(?1)", Product.class);
+            qry.setParameter(1, "%" + name + "%");
+            return qry.getResultList();
+        }
     }
 
     @Override
     public List<Product> getProductsByPriceRange(double min, double max) throws DaoException {
-        return null;
+        try (EntityManager em = JpaUtil.createEntityManager()) {
+            TypedQuery<Product> qry = em.createQuery(
+                    "from Product where unitPrice between ?1 and ?2", Product.class);
+            qry.setParameter(1, min);
+            qry.setParameter(2, max);
+            return qry.getResultList();
+        }
     }
 }

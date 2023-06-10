@@ -19,11 +19,12 @@ public class GetCategoryById {
                 log.warn("No category for id {}", id);
                 return;
             }
+
+            log.trace("Category name = {}", cat.getCategoryName());
+            log.trace("Description = {}", cat.getDescription());
+            log.trace("Products in this category are: ");
+            cat.getProducts() // if (fetch=FetchType.LAZY) then there is an error, since DB connection is closed
+                    .forEach(p -> log.trace("Product name = {}", p.getProductName()));
         } // em.close() called here, and DB connection gets closed as well
-        log.trace("Category name = {}", cat.getCategoryName());
-        log.trace("Description = {}", cat.getDescription());
-        log.trace("Products in this category are: ");
-        cat.getProducts() // if (fetch=FetchType.LAZY) then there is an error, since DB connection is closed
-                .forEach(p -> log.trace("Product name = {}", p.getProductName()));
     }
 }
