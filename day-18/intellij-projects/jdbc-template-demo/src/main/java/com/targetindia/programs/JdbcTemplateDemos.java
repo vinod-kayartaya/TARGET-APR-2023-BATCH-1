@@ -1,10 +1,12 @@
 package com.targetindia.programs;
 
 import com.targetindia.config.AppConfig1;
+import com.targetindia.entity.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowCallbackHandler;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 import java.util.Map;
@@ -12,14 +14,40 @@ import java.util.Map;
 @Slf4j
 public class JdbcTemplateDemos {
     static JdbcTemplate jt;
+    static RowMapper<Product> prm = (rs, rowNum) -> {
+        Product p = new Product();
+        p.setProductId(rs.getInt("product_id"));
+        p.setProductName(rs.getString("product_name"));
+        p.setSupplierId(rs.getInt("supplier_id"));
+        p.setCategoryId(rs.getInt("category_id"));
+        p.setQuantityPerUnit(rs.getString("quantity_per_unit"));
+        p.setUnitPrice(rs.getDouble("unit_price"));
+        p.setUnitsInStock(rs.getInt("units_in_stock"));
+        p.setUnitsOnOrder(rs.getInt("units_on_order"));
+        p.setReorderLevel(rs.getInt("reorder_level"));
+        p.setDiscontinued(rs.getInt("discontinued"));
+        return p;
+    };
 
     public static void main(String[] args) {
         try (
                 AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig1.class)
         ) {
             jt = ctx.getBean(JdbcTemplate.class);
-            demo5();
+            demo7();
         }// ctx.close() called here
+    }
+
+    private static void demo7() {
+        jt.query("select * from products where units_in_stock=0", prm)
+                .forEach(System.out::println);
+    }
+
+    private static void demo6() {
+        String sql = "select * from products where product_id=?";
+        int productId = 34;
+        Product p = jt.queryForObject(sql, prm, productId);
+        log.trace("p = {}", p);
     }
 
     private static void demo5() {

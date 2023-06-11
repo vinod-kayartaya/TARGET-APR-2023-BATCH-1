@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,11 +14,8 @@ import javax.sql.DataSource;
 @Slf4j
 @Configuration
 @PropertySource("classpath:jdbc-info.properties")
+@ComponentScan(basePackages = {"com.targetindia.dao"})
 public class AppConfig1 {
-
-    public AppConfig1() {
-        log.trace("AppConfig1 constructor called");
-    }
 
     @Bean
     public JdbcTemplate template(DataSource ds) { // Dependency injection takes place here
