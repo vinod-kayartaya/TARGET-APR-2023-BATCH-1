@@ -15,6 +15,8 @@ import javax.sql.DataSource;
 @Configuration
 @PropertySource("classpath:jdbc-info.properties")
 @ComponentScan(basePackages = {"com.targetindia.dao"})
+// looks for classes decorated with:
+// @Component, @Service, @Repository, @Controller, @RestController, @Configuration
 public class AppConfig1 {
 
     @Bean
