@@ -107,3 +107,5 @@ RESPONSE-HEADER-N: VALUE-N
 ```
 
 ![](./spring-mvc.dio.png)
+
+{% include ./test-requests.http %}
