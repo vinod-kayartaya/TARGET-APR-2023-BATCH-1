@@ -48,7 +48,7 @@ public class ContactsController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping(path = "/{id}", produces = {"application/json", "application/xml"})
     public ResponseEntity handleGetOne(@PathVariable Integer id) {
         Contact c = service.getById(id);
         if (c == null) {
