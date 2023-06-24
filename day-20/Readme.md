@@ -108,4 +108,110 @@ RESPONSE-HEADER-N: VALUE-N
 
 ![](./spring-mvc.dio.png)
 
-{% include ./test-requests.http %}
+```
+### Get a list of all contacts in JSON format
+GET /api/contacts HTTP/1.1
+Host: localhost:8080
+Accept: application/json
+
+### Get a list of all contacts in XML format
+GET /api/contacts
+Host: localhost:8080
+Accept: application/xml
+
+### Get a list of all contacts in Text format (response will be status 406)
+GET /api/contacts
+Host: localhost:8080
+Accept: text/plain
+
+### Get one contact (by id) in json format
+GET /api/contacts/53398b34-21a8-47a6-b94e-58766446ebda
+Host: localhost:8080
+Accept: application/json
+
+### Get one contact (by id) in xml format
+GET /api/contacts/53398b34-21a8-47a6-b94e-58766446ebda
+Host: localhost:8080
+Accept: application/xml
+
+### Get one contact (by id) in text format
+GET /api/contacts/53398b34-21a8-47a6-b94e-58766446ebda
+Host: localhost:8080
+Accept: text/plain
+
+### Create a new contact in JSON format without any payload
+### Error 400
+POST /api/contacts
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+### Create a new contact in JSON format (empty json object)
+### Error 500 - Firstname is required but missing
+POST /api/contacts
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+
+{}
+### Create a new contact in JSON format (minimum required fields)
+### status 201 - created
+### Sending the same again will result in an error (email/phone must be unique)
+POST /api/contacts
+Host: localhost:8080
+Content-Type: application/json
+Accept: application/json
+
+{"firstname":"Vinod","email":"vinod@vinod.co","phone":"9731424784"}
+
+### Create a new contact in xml format (minimum required fields)
+### status 201 - created
+### Sending the same again will result in an error (email/phone must be unique)
+POST /api/contacts
+Host: localhost:8080
+Content-Type: application/xml
+Accept: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contact>
+  <firstname>Shyam</firstname>
+  <email>shyam@xmpl.com</email>
+  <phone>9844033512</phone>
+</contact>
+
+### Search contact by email
+GET /api/contacts?email=shyam@xmpl.com
+Host: localhost:8080
+Accept: application/json
+
+### The PUT request replaces the complete document for the given id
+PUT /api/contacts/19ad7151-e938-4828-b195-ecc861f36341
+Host: localhost:8080
+Accept: application/json
+Content-Type: application/json
+
+{
+    "firstname": "Shyam",
+    "email": "shyam@xmpl.com",
+    "phone": "9844033512",
+    "city": "Bangalore",
+    "state": "Karnataka"
+}
+
+### To perform partial update, PATCH is used
+PATCH /api/contacts/19ad7151-e938-4828-b195-ecc861f36341
+Host: localhost:8080
+Accept: application/json
+Content-Type: application/json
+
+{
+    "lastname": "Sundar",
+    "gender": "Male",
+    "country": "India"
+}
+### To perform delete, DELETE verb is used
+DELETE /api/contacts/19ad7151-e938-4828-b195-ecc861f36341
+Host: localhost:8080
+Accept: application/json
+
+
+```
