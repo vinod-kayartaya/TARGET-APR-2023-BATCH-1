@@ -1,0 +1,139 @@
+GET /api/contacts/info
+Host: localhost:9876
+Accept: text/plain
+
+###
+POST /api/contacts/info
+Host: localhost:9876
+
+###
+GET /api/contacts/info
+Host: localhost:9876
+Accept: application/json
+
+###
+GET /api/contacts/info
+Host: localhost:9876
+Accept: application/xml
+
+###
+
+POST /api/contacts
+Host: localhost:9876
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Vinod Kumar", 
+    "email": "vinod@vinod.co", 
+    "phone": "9731424784", 
+    "city": "Bangalore"
+}
+###
+
+POST /api/contacts
+Host: localhost:9876
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Shyam Sunar",
+    "email": "shyam@xmpl.com"
+}
+
+###
+
+POST /api/contacts
+Host: localhost:9876
+Content-Type: application/xml
+Accept: application/xml
+
+<?xml version="1.0" ?>
+<contact>
+    <name>Kishore Kumar</name>
+    <email>kishore@xmpl.com</email>
+    <phone>9876567854</phone>
+    <city>Mysore</city>
+</contact>
+
+###
+
+GET /api/contacts/1
+Host: localhost:9876
+Accept: application/json
+
+###
+
+GET /api/contacts/3
+Host: localhost:9876
+Accept: application/xml
+
+###
+
+GET /api/contacts/32
+Host: localhost:9876
+Accept: application/xml
+
+###
+
+PUT /api/contacts/2
+Host: localhost:9876
+Accept: application/json
+Content-Type: application/json
+
+{
+    "id": 22, 
+    "name": "Shyam Sundar KC",
+    "email": "shyam.sundar.kc@xmpl.com",
+    "phone": "9876578654",
+    "city": "Bangalore"
+}
+###
+
+PUT /api/contacts/2
+Host: localhost:9876
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Shyam Sundar",
+    "email": "shyamsundar@xmpl.com",
+    "city": "Bangalore",
+    "phone": "9834578123"
+}
+
+###
+
+GET /api/contacts
+Host: localhost:9876
+Accept: application/json
+
+###
+
+GET /api/contacts
+Host: localhost:9876
+Accept: application/xml
+
+###
+
+http://localhost:9876/api/contacts/search
+###
+
+http://localhost:9876/api/contacts/search?city=LORE
+###
+http://localhost:9876/api/contacts/search?email=vinod@vinod.co
+###
+http://localhost:9876/api/contacts/search?phone=9731424784
+
+###
+GET /api/contacts/search?city=banga
+Host: localhost:9876
+Accept: application/xml
+###
+GET /api/contacts/search?email=shyamsundar@xmpl.com
+Host: localhost:9876
+Accept: application/xml
+###
+GET /api/contacts/search?phone=9876567854
+Host: localhost:9876
+Accept: application/xml
