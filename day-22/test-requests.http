@@ -1,0 +1,24 @@
+GET /api/products/122
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products/122
+Host: localhost:8000
+Accept: application/xml
+
+###
+
+GET /api/products/23
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products/34
+Host: localhost:8000
+Accept: application/xml
+
+###
+
