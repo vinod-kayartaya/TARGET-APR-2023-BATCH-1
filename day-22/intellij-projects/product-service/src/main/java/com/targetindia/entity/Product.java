@@ -1,16 +1,16 @@
 package com.targetindia.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
 
 @Data
+@XmlRootElement
 @Entity
 @Table(name = "products")
 public class Product {
     @Id
+    @GeneratedValue(generator = "increment")
     @Column(name="product_id")
     private Integer productId;
 

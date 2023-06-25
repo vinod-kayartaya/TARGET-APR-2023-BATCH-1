@@ -22,3 +22,103 @@ Accept: application/xml
 
 ###
 
+GET /api/products
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products
+Host: localhost:8000
+Accept: application/xml
+
+###
+
+
+GET /api/products?page=4
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products?page=2&limit=20
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products/by-price-range?max=10
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products/by-price-range?min=100
+Host: localhost:8000
+Accept: application/xml
+
+###
+
+GET /api/products/by-price-range?min=50&max=500
+Host: localhost:8000
+Accept: application/json
+
+###
+
+GET /api/products/by-price-range
+Host: localhost:8000
+Accept: application/json
+
+###
+
+POST /api/products
+Host: localhost:8000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "productName": "Diet Coke",
+    "quantityPerUnit": "10 boxes x 20 tins",
+    "unitPrice": 21.5,
+    "categoryId": 1,
+    "supplierId": 1,
+    "unitsInStock": 10,
+    "unitsOnOrder": 0,
+    "reorderLevel": 2,
+    "discontinued": 0
+}
+
+###
+
+PUT /api/products/85
+Host: localhost:8000
+Content-Type: application/json
+Accept: application/json
+
+{
+    "productId": 100,
+    "productName": "Diet Coke",
+    "quantityPerUnit": "10 boxes x 20 tins",
+    "unitPrice": 21.5,
+    "categoryId": 1,
+    "supplierId": 1,
+    "unitsInStock": 123,
+    "unitsOnOrder": 89,
+    "reorderLevel": 15,
+    "discontinued": 0
+}
+
+###
+
+GET /api/categories/5
+Host: localhost:8100
+Accept: application/json
+
+###
+
+GET /api/suppliers/5
+Host: localhost:8200
+Accept: application/json
+
+###
+
