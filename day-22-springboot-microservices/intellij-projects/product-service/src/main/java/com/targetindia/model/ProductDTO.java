@@ -1,11 +1,14 @@
 package com.targetindia.model;
 
 import jakarta.persistence.Column;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
 
 @Data
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ProductDTO {
     private Integer productId;
     private String productName;

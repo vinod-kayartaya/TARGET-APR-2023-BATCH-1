@@ -91,7 +91,7 @@ public class ProductService {
                         CategoryDTO.class);
                 categoryCache.put(categoryDTO.getId(), categoryDTO);
             } catch (RestClientException e) {
-                log.warn("error while fetching category from category-service", e);
+//                log.warn("error while fetching category from category-service", e);
                 // nothing can be done, let's not give error to the user
                 // send only the product information without category information
             }
@@ -116,7 +116,7 @@ public class ProductService {
                         .block();
                 supplerCache.put(supplierDTO.getSupplierId(), supplierDTO);
             } catch (Exception e) {
-                log.warn("error while fetching supplier from supplier-service", e);
+//                log.warn("error while fetching supplier from supplier-service", e);
             }
         }
 
