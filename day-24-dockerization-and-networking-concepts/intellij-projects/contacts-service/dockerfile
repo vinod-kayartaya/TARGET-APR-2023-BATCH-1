@@ -1,0 +1,4 @@
+from openjdk:17-alpine
+workdir /vinod/workspace
+add ./target/contacts-service-0.0.1-SNAPSHOT.jar ./app.jar
+cmd ["java", "-jar", "./app.jar"]

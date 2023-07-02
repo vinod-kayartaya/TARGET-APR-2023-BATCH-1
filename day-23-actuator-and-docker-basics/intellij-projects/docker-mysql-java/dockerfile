@@ -1,0 +1,4 @@
+FROM openjdk:17-alpine
+WORKDIR /vinod/workspace
+ADD ./target/docker-mysql-java-1.0-SNAPSHOT.jar ./app.jar
+ENTRYPOINT java -cp ./app.jar com.targetindia.programs.HelloWorld

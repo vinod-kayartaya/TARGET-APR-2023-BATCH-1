@@ -1,0 +1,30 @@
+2023-07-02T11:18:56.702+05:30  INFO 2370 --- [main] c.t.ContactsServiceApplication           : Starting ContactsServiceApplication using Java 20.0.1 with PID 2370 (/Users/vinod/Documents/TARGET-APR-2023-BATCH-1/day-24-dockerization-and-networking-concepts/intellij-projects/contacts-service/target/classes started by vinod in /Users/vinod/Documents/TARGET-APR-2023-BATCH-1/day-24-dockerization-and-networking-concepts/intellij-projects/contacts-service)
+2023-07-02T11:18:56.703+05:30  INFO 2370 --- [main] c.t.ContactsServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2023-07-02T11:18:57.526+05:30  INFO 2370 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02T11:18:57.568+05:30  INFO 2370 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2023-07-02T11:18:58.116+05:30  INFO 2370 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-02T11:18:58.130+05:30  INFO 2370 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-02T11:18:58.130+05:30  INFO 2370 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-02T11:18:58.234+05:30  INFO 2370 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-02T11:18:58.235+05:30  INFO 2370 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1482 ms
+2023-07-02T11:18:58.563+05:30  INFO 2370 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-02T11:18:58.951+05:30  INFO 2370 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7d0cd23c
+2023-07-02T11:18:58.953+05:30  INFO 2370 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-02T11:18:58.993+05:30  INFO 2370 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-02T11:18:59.029+05:30  INFO 2370 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-02T11:18:59.031+05:30  INFO 2370 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-02T11:18:59.137+05:30  INFO 2370 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-02T11:18:59.299+05:30  INFO 2370 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-02T11:18:59.562+05:30  INFO 2370 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-02T11:19:00.023+05:30  INFO 2370 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-02T11:19:00.026+05:30  INFO 2370 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02T11:19:00.262+05:30  WARN 2370 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-02T11:19:00.645+05:30  INFO 2370 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2023-07-02T11:19:00.711+05:30  INFO 2370 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-02T11:19:00.724+05:30  INFO 2370 --- [main] c.t.ContactsServiceApplication           : Started ContactsServiceApplication in 4.483 seconds (process running for 4.905)
+2023-07-02T11:19:05.127+05:30  INFO 2370 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-02T11:19:05.127+05:30  INFO 2370 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-02T11:19:05.129+05:30  INFO 2370 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-02T11:20:02.123+05:30  INFO 2370 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-02T11:20:02.128+05:30  INFO 2370 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-02T11:20:02.152+05:30  INFO 2370 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

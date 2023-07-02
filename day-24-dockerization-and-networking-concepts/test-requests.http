@@ -1,0 +1,14 @@
+POST /api/contacts
+Host: localhost:2345
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Kiran",
+    "city": "Hassan"
+}
+
+###
+GET /api/contacts
+Host: localhost:2345
+Accept: application/json
